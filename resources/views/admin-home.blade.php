@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('This is Employee Panel') }}
+                    {{ __('This is admin Panel') }}
                 </div>
             </div>
         </div>

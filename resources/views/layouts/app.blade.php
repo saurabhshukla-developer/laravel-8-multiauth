@@ -52,6 +52,13 @@
                                 </li>
                             @endif
                         @else
+                            @if (auth()->user()->is_admin)
+                                @if (Route::current()->getName() == 'home')
+                                    <a href="{{ route('admin.home') }}"><li class="nav-link">Admin Panel</li></a>
+                                @else
+                                    <a href="{{ route('home') }}"><li class="nav-link">Agent Panel</li></a>
+                                @endif
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
